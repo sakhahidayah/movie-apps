@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chill - app</title>
+    <link
+      rel="shortcut icon"
+      href="./img/logo/movie-open.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Londrina+Solid:wght@100;300;400;900&family=Special+Gothic+Expanded+One&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lato: "Lato",
+            },
+            letterSpacing: {
+              standar: "140%",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="flex bg-[url('./img/background/masuk.jpg')] bg-cover bg-center font-lato text-white w-screen h-screen justify-center items-center overflow-hidden bg-no-repeat"
+  >
+    <main class="bg-[#181a1ced] rounded-lg p-6 gap-5 min-w-[306px]">
+      <div class="flex flex-col justify-center items-center mb-5">
+        <img src="./img/logo/chill.png" alt="" class="w-24 h-6 mb-5" />
+        <h3 class="font-bold text-xl leading-[140%] tracking-wide mb-1">
+          Masuk
+        </h3>
+        <p class="font-normal text-xs leading-[140%] tracking-wide">
+          Selamat datang kembali!
+        </p>
+      </div>
+      <form action="">
+        <div class="flex flex-col gap-1 mb-5">
+          <label for="username">Username</label>
+          <input
+            class="bg-transparent px-3 py-2 border border-[#E7E3FC3B] rounded-xl text-[#C1C2C4] font-normal text-[9px] leading-[140%] tracking-wide focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Masukkan username"
+          />
+        </div>
+        <div class="flex flex-col gap-1 mb-[3px]">
+          <label for="password">Kata sandi</label>
+          <div class="flex flex-col relative">
+            <input
+              class="bg-transparent px-3 py-2 border border-[#E7E3FC3B] rounded-xl text-[#C1C2C4] font-normal text-[9px] leading-[140%] tracking-wide focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Masukkan kata sandi"
+            />
+            <i class="absolute top-2 right-3 w-3 h-2"
+              ><img src="./img/logo/eye-splash-off.png" alt=""
+            /></i>
+          </div>
+        </div>
+        <div class="flex flex-row justify-between mb-5">
+          <p class="font-normal text-[#C1C2C4] text-[9px]">
+            Belum punya akun?
+            <a href="./register.html" class="text-white">Daftar</a>
+          </p>
+          <p class="font-normal text-[9px]">Lupa kata sandi?</p>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <button
+            type="submit"
+            class="bg-transparent px-3 py-2 border border-[#E7E3FC3B] rounded-xl w-full font-semibold text-[10px] leading-[140%] tracking-wide hover:bg-[#3D4142]"
+          >
+            <a href="beranda.html"> Masuk </a>
+          </button>
+          <p
+            class="font-medium text-[#C1C2C4] text-[10px] tracking-wide mb-1 mt-1"
+          >
+            atau
+          </p>
+
+          <button
+            type="submit"
+            class="w-full px-3 py-2 bg-transparent border-[0.58px] border-[#E7E3FC3B rounded-[14px] font-semibold text-[10px] leading-[140%] tracking-wide flex flex-row justify-center items-center gap-2"
+          >
+            <img src="./img/logo/google.png" alt="" /><span>
+              Masuk dengan Google</span
+            >
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

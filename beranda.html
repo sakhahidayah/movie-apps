@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chill - app</title>
+    <link
+      rel="shortcut icon"
+      href="./img/logo/movie-open.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Londrina+Solid:wght@100;300;400;900&family=Special+Gothic+Expanded+One&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lato: "Lato",
+            },
+            letterSpacing: {
+              standar: "140%",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-lato bg-[#181A1C]">
+    <nav class="bg-red-[#181A1C] text-slate-400 px-5 py-2 lg:px-20 lg:py-6">
+      <div class="flex justify-between">
+        <div
+          class="flex justify-center items-center gap-4 lg:gap-10 font-medium text-[10px] leading-[140%] tracking-wide lg:min-w-[200px]"
+        >
+          <img
+            src="./img/logo/movie-open.png"
+            alt=""
+            class="block w-4 h-4 lg:hidden"
+          />
+          <div
+            class="hidden bg-[url('./img/logo/chill.png')] w-[103px] h-7 bg-cover lg:block"
+          ></div>
+          <a
+            href=""
+            class="lg:font-medium lg:text-lg leading-[140%] tracking-wide hover:text-white hover:underline hover:underline-offset-2 transition-colors duration-300"
+            >Series</a
+          >
+          <a
+            href=""
+            class="lg:font-medium lg:text-lg leading-[140%] tracking-wide hover:text-white hover:underline hover:underline-offset-2 transition-colors duration-300"
+            >Film</a
+          >
+          <a
+            href=""
+            class="lg:font-medium lg:text-lg leading-[140%] tracking-wide hover:text-white hover:underline hover:underline-offset-2 transition-colors duration-300"
+            >Daftar Saya</a
+          >
+        </div>
+        <div class="relative group lg:w-20 lg:h-10">
+          <button class="flex flex-row gap-1 justify-center items-center">
+            <img
+              src="./img/logo/profile.png"
+              alt=""
+              class="w-5 h-5 lg:w-10 lg:h-10 rounded-full"
+            />
+            <a href="" class="group relative lg:w-7 lg:h-7"
+              ><i class="fas fa-angle-down "></i
+            ></a>
+          </button>
+          <div
+            class="group-hover:inline-block absolute -right-0 w-40 lg:w-44 bg-[#181A1C] text-white shadow-lg rounded opacity-0 group-hover:opacity-100 transition duration-500 z-10 text-center"
+          >
+            <a
+              href="#"
+              class="px-[12px] py-2 text-[#3254FF] hover:bg-slate-600 flex flex-row justify-center items-center font-medium text-[10px] leading-[140%] tracking-wide gap-1 lg:text-sm"
+            >
+              <i class="fas fa-user-alt mr-1"></i> Profile Saya</a
+            >
+            <a
+              href="#"
+              class="px-[12px] py-2 hover:bg-slate-600 flex flex-row justify-center items-center font-medium text-[10px] leading-[140%] tracking-wid lg:text-sm"
+            >
+              <i class="fas fa-star mr-1"></i> Ubah Premium</a
+            >
+            <a
+              href="./index.html"
+              class="block px-4 py-2 hover:bg-slate-600 font-medium text-[10px] leading-[140%] tracking-wide lg:text-sm"
+              >Keluar</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="bg-gradient-to-b from-[#000000] to-[#181A1C]">
+        <div
+          class="bg-[linear-gradient(to_top,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0)_60%),url('./img/background/film/bg-duty.png')] bg-cover bg-center overflow-hidden flex flex-col min-h-60 pl-7 pt-20 pb-10 pr-4 lg:pl-20 lg:pt-40 lg:pr-20"
+        >
+          <div class="text-white">
+            <div class="lg:w-[500px] lg:mb-10">
+              <h4 class="font-bold text-2xl leading-[120%] mb-3">
+                Duty After School
+              </h4>
+              <p class="font-medium text-xs leading-[140%] tracking-wide mb-3">
+                Sebuah benda tak dikenal mengambil alih dunia. Dalam
+                keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak
+                tentara, termasuk siswa sekolah menengah. Mereka pun segera
+                menjadi pejuang garis depan dalam perang.
+              </p>
+            </div>
+
+            <div class="flex flex-row gap-2">
+              <button
+                class="px-3 py-1 bg-[#0F1E93] rounded-2xl w-14 h-6 font-bold text-xs leading-[140%] tracking-wide lg:w-[93px] lg:h-[42px] lg:rounded-[48px] lg:px-[26px] lg:text-base"
+              >
+                Mulai
+              </button>
+              <button
+                class="bg-gray-700 rounded-2xl px-3 py-1 font-bold text-xs leading-[140%] tracking-wide flex flex-row gap-2 justify-center items-center lg:px-[26px] lg:py-5 lg:rounded-[48px] lg:w-[185px] lg:h-[45px] lg:text-base lg:gap-3"
+              >
+                <i class="fas fa-info-circle w-3 h-3"></i> Selengkapnya
+              </button>
+              <div
+                class="flex flex-row gap-1 justify-between items-center w-full"
+              >
+                <div
+                  class="bg-transparent w-[30px] h-[25px] border rounded-3xl p-1 text-xs font-bold leading-[140%] tracking-wide lg:w-[52px] lg:h-[45px] lg:p-[10px] lg:text-lg text-[#C1C2C4] flex justify-center items-center"
+                >
+                  <p>18+</p>
+                </div>
+                <div
+                  class="w-6 h-[25px] rounded-3xl border border-[#C1C2C4] p-2 flex justify-center items-center lg:w-11 lg:h-11"
+                >
+                  <i class="material-icons text-sm text-[#C1C2C4] lg:text-2xl"
+                    >volume_off</i
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#181a1c] text-white overflow-hidden relative">
+      <div class="py-5 lg: gap-5 px-6 relative lg:pl-20 lg:py-10">
+        <h5 class="font-bold text-xl leading-[120%] mb-5 lg:text-[32px]">
+          Melanjutkan Tonton Film
+        </h5>
+        <button
+          id="btnLeft"
+          class="absolute z-10 top-1/2 -left-0 lg:left-[70px]"
+        >
+          <i class="fas fa-arrow-left bg-[#2F3334] rounded-3xl p-3"></i>
+        </button>
+        <button id="btnRight" class="absolute z-10 right-0 top-1/2">
+          <i class="fas fa-arrow-right bg-[#2F3334] rounded-3xl p-3"></i>
+        </button>
+        <div
+          id="filmContainer"
+          class="flex flex-nowrap overflow-x-auto gap-4 scroll-smooth snap-x lg:overflow-x-hidden lg:min-w-full lg:gap-7"
+        >
+          <div
+            class="bg-[url('./img/background/film/dont-look-up.png')] bg-cover bg-center rounded min-h-[151px] flex min-w-[300px] justify-between items-end p-4 snap-end"
+          >
+            <p class="font-bold text-sm leading-[140%] tracking-wide">
+              Don’t Look Up
+            </p>
+            <p class="font-normal text-xs leading-[140%] tracking-wide">
+              <i class="fas fa-star w-3 h-3 mr-1"></i> 4.5/5
+            </p>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/blue-lock.png')] bg-cover bg-center rounded min-h-[151px] flex min-w-[300px] justify-between items-end p-4 snap-end"
+          >
+            <p class="font-bold text-sm leading-[140%] tracking-wide">
+              Blue Lock
+            </p>
+            <p class="font-normal text-xs leading-[140%] tracking-wide">
+              <i class="fas fa-star w-3 h-3 mr-1"></i> 4.5/5
+            </p>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/doctor-strange.png')] bg-cover bg-center rounded min-h-[151px] flex min-w-[300px] justify-between items-end p-4 snap-end"
+          >
+            <p class="font-bold text-sm leading-[140%] tracking-wide">
+              Doctor Strange
+            </p>
+            <p class="font-normal text-xs leading-[140%] tracking-wide">
+              <i class="fas fa-star w-3 h-3 mr-1"></i> 4.5/5
+            </p>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/called-oto.png')] bg-cover bg-center rounded min-h-[151px] flex min-w-[300px] justify-between items-end p-4 snap-end"
+          >
+            <p class="font-bold text-sm leading-[140%] tracking-wide">
+              A man called otto
+            </p>
+            <p class="font-normal text-xs leading-[140%] tracking-wide">
+              <i class="fas fa-star w-3 h-3 mr-1"></i> 4.5/5
+            </p>
+          </div>
+
+          <div
+            class="bg-[url('./img/background/film/nowayhome.jpg')] bg-cover bg-center rounded min-h-[151px] flex min-w-[300px] justify-between items-end p-4 snap-end"
+          >
+            <p class="font-bold text-sm leading-[140%] tracking-wide">
+              Spiderman No Way Home
+            </p>
+            <p class="font-normal text-xs leading-[140%] tracking-wide">
+              <i class="fas fa-star w-3 h-3 mr-1"></i> 4.5/5
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 min-w-80 lg:min-w-[1024px] relative lg:pl-20 lg:py-10">
+        <h5 class="font-bold leadng-[120%] text-xl lg:text-[32px]">
+          Top Rating Film dan Series Hari ini
+        </h5>
+        <button
+          id="btnKiri"
+          class="absolute z-10 top-1/2 -left-0 lg:left-[70px]"
+        >
+          <i class="fas fa-arrow-left bg-[#2F3334] rounded-3xl p-3"></i>
+        </button>
+        <button id="btnKanan" class="absolute z-10 -right-0 top-1/2">
+          <i class="fas fa-arrow-right bg-[#2F3334] rounded-3xl p-3"></i>
+        </button>
+        <div
+          id="topRating"
+          class="mt-5 flex flex-nowrap overflow-x-auto gap-4 scroll-smooth snap-center snap-x lg:min-w-full lg:gap-7 lg:overflow-x-hidden"
+        >
+          <div
+            class="bg-[url('./img/background/film/suzume.png')] min-w-24 h-36 bg-cover bg-center rounded pt-2 pl-2 lg:min-w-[234px] lg:min-h-[365px] snap-end"
+          >
+            <p
+              class="bg-[#0F1E93] rounded-xl w-[44px] h-[14px] px-1 py-0.5 border-[0.5px] font-bold text-[5.74px] leading-[140%] border-[#0F1E93]"
+            >
+              Episode baru
+            </p>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/sonic.png')] min-w-24 h-36 bg-cover bg-center rounded lg:min-w-[234px] lg:min-h-[365px] snap-end"
+          ></div>
+          <div
+            class="bg-[url('./img/background/film/big-hero.png')] min-w-24 h-36 bg-cover bg-center rounded pt-2 pl-2 lg:min-w-[234px] lg:min-h-[365px] snap-end"
+          >
+            <p
+              class="bg-[#0F1E93] rounded-xl w-[44px] h-[14px] px-1 py-0.5 border-[0.5px] font-bold text-[5.74px] leading-[140%] border-[#0F1E93]"
+            >
+              Episode baru
+            </p>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/jurasicworld.png')] min-w-24 h-36 bg-cover bg-center rounded lg:min-w-[234px] lg:min-h-[365px] snap-end"
+          ></div>
+          <div
+            class="bg-[url('./img/background/film/allofus.png')] min-w-24 h-36 bg-cover bg-center rounded pt-2 pl-2 lg:min-w-[234px] lg:min-h-[365px] snap-end"
+          >
+            <p
+              class="bg-[#0F1E93] rounded-xl w-[44px] h-[14px] px-1 py-0.5 border-[0.5px] font-bold text-[5.74px] leading-[140%] border-[#0F1E93]"
+            >
+              Episode baru
+            </p>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/guardian.png')] min-w-24 h-36 bg-cover bg-center rounded lg:min-w-[234px] lg:min-h-[365px] snap-end"
+          ></div>
+        </div>
+      </div>
+      <div class="px-6 relative mb-5 lg:pl-20 lg:py-10">
+        <h5 class="mt-5 font-bold leadng-[120%] text-xl lg:text-[32px]">
+          Film Trending 🔥
+        </h5>
+        <button
+          id="trendingKiri"
+          class="absolute z-10 top-1/2 -left-0 lg:left-[70px]"
+        >
+          <i class="fas fa-arrow-left bg-[#2F3334] rounded-3xl p-3"></i>
+        </button>
+        <button id="trendingKanan" class="absolute z-10 -right-0 top-1/2">
+          <i class="fas fa-arrow-right bg-[#2F3334] rounded-3xl p-3"></i>
+        </button>
+        <div
+          id="trending"
+          class="mt-5 flex flex-nowrap overflow-x-auto gap-4 scroll-smooth snap-center lg:min-w-full lg:gap-7 lg:overflow-x-hidden"
+        >
+          <div
+            class="bg-[url('./img/background/film/thetomorrow.png')] min-w-24 h-36 bg-cover bg-center rounded flex relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/quantumania.png')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/littlemermaid.png')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/infinitywar.jpg')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/ghibli.jpg')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/fastandfurious.jpg')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 relative lg:pl-20 lg:py-10">
+        <h5 class="font-bold text-xl leading-[120%] lg:text-[32px]">
+          Rilis baru
+        </h5>
+        <button
+          id="rilisKiri"
+          class="absolute z-10 top-1/2 -left-0 lg:left-[70px]"
+        >
+          <i class="fas fa-arrow-left bg-[#2F3334] rounded-3xl p-3"></i>
+        </button>
+        <button id="rilisKanan" class="absolute z-10 -right-0 top-1/2">
+          <i class="fas fa-arrow-right bg-[#2F3334] rounded-3xl p-3"></i>
+        </button>
+        <div
+          id="rilisBaru"
+          class="mt-5 flex flex-nowrap overflow-x-auto gap-4 scroll-smooth snap-center lg:min-w-full lg:gap-7 lg:overflow-x-hidden"
+        >
+          <div
+            class="bg-[url('./img/background/film/dutyafter.png')] min-w-24 h-36 bg-cover bg-center rounded pt-2 pl-2 lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <p
+              class="bg-[#0F1E93] rounded-xl w-[44px] h-[14px] px-1 py-0.5 border-[0.5px] font-bold text-[5.74px] leading-[140%] border-[#0F1E93]"
+            >
+              Episode baru
+            </p>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/frieren.jpg')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/thewind.jpg')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/venom.jpg')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/squidgame.jpg')] min-w-24 h-36 bg-cover bg-center rounded pt-2 pl-2 lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <p
+              class="bg-[#0F1E93] rounded-xl w-[44px] h-[14px] px-1 py-0.5 border-[0.5px] font-bold text-[5.74px] leading-[140%] border-[#0F1E93]"
+            >
+              Episode baru
+            </p>
+          </div>
+          <div
+            class="bg-[url('./img/background/film/jumbo.jpg')] min-w-24 h-36 bg-cover bg-center rounded relative lg:min-w-[234px] lg:min-h-[365px]"
+          >
+            <div
+              class="flex flex-wrap p-[2px] w-[14px] h-[21px] bg-red-500 top-0 right-1 absolute"
+            >
+              <span class="font-normal text-[6px] leading-[140%]">Top</span>
+              <span class="font-normal text-[6px] leading-[140%]">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="mt-7 bg-[#181A1C] border-[#E7E3FC3B] border-t-2 p-5 text-white lg:flex lg:flex-row lg:justify-between"
+    >
+      <div class="mb-10">
+        <img src="./img/logo/chill-header.png" alt="" class="mb-4 w-20 h-6" />
+        <p
+          class="font-normal text-xs leading-[140%] tracking-wider text-[#C1C2C4]"
+        >
+          @2025 Chill All Rights Reserved
+        </p>
+      </div>
+      <details class="p-4 group duration-300 transition-all lg:hidden">
+        <summary
+          class="flex flex-row justify-between items-center cursor-pointer select-none"
+        >
+          <span class="font-bold text-base leading-[140%] tracking-wide"
+            >Genre</span
+          >
+          <i
+            class="fas fa-angle-right transform transition-transform duration-300 group-open:rotate-90"
+          ></i>
+        </summary>
+        <div
+          class="transition-all duration-300 ease-in-out max-h-0 group-open:max-h-[500px] mt-3 font-medium text-base leading-[140%] tracking-wide text-[#C1C2C4] grid grid-rows-4 grid-flow-col gap-3"
+        >
+          <p>Aksi</p>
+          <p>Anak-anak</p>
+          <p>Britania</p>
+          <p>Anime</p>
+          <p>Drama</p>
+          <p>Fantasi Ilmiah & Fantasi</p>
+          <p>Kejahatan</p>
+          <p>KDrama</p>
+          <p>Komedi</p>
+          <p>Petualang</p>
+          <p>Romantis</p>
+          <p>Perang</p>
+          <p>Sains & Alam</p>
+          <p>Thriller</p>
+        </div>
+      </details>
+
+      <details class="p-4 group duration-300 transition-all lg:hidden">
+        <summary
+          class="flex flex-row justify-between items-center cursor-pointer"
+        >
+          <span class="font-bold text-base leading-[140%] tracking-wide"
+            >Bantuan</span
+          >
+          <i
+            class="fas fa-angle-right transition-transform duration-300 group-open:rotate-90"
+          ></i>
+        </summary>
+        <div
+          class="flex flex-col gap-3 mt-3 font-medium text-base leading-[140%] tracking-wide text-[#C1C2C4] transition-all duration-300 ease-in-out max-h-0 group-open:max-h-[500px]"
+        >
+          <p>FAQ</p>
+          <p>Kontak Kami</p>
+          <p>Privasi</p>
+          <p>Syarat & Ketentuan</p>
+        </div>
+      </details>
+      <div class="hidden lg:block min-w-[514px] ">
+        <h4 class="font-bold text-base leading-[140%] tracking-wide">Genre</h4>
+        <div class="mt-[15px] grid grid-rows-4 grid-flow-col gap-3 text-[#C1C2C4]">
+          <p>Aksi</p>
+          <p>Anak-anak</p>
+          <p>Anime</p>
+          <p>Britania</p>
+          <p>Drama</p>
+          <p>Fantasi Ilmiah</p>
+          <p>Kejahatan</p>
+          <p>KDrama</p>
+          <p>Komedi</p>
+          <p>Petualangan</p>
+          <p>Perang</p>
+          <p>Romantis</p>
+          <p>Sains & alam</p>
+          <p>Thriller</p>
+        </div>
+      </div>
+      <div  class="hidden lg:block">
+        <h4 class="font-bold text-base leading-[140%] tracking-wide">Bantuan</h4>
+        <div class="mt-[15px] flex flex-col gap-3 text-[#C1C2C4]">
+          <p>FAQ</p>
+          <p>Kontak kami</p>
+          <p>Privasi</p>
+          <p>Syarat & Ketentuan</p>
+        
+      </div>
+    </footer>
+    <script>
+      const filmContainer = document.getElementById("filmContainer");
+      const scrollbtnLeft = document.getElementById("btnLeft");
+      const scrollbtnRight = document.getElementById("btnRight");
+
+      btnLeft.addEventListener("click", () => {
+        filmContainer.scrollLeft -= 350;
+      });
+      btnRight.addEventListener("click", () => {
+        filmContainer.scrollLeft += 350;
+      });
+
+      const topRating = document.getElementById("topRating");
+      const btnKiri = document.getElementById("btnKiri");
+      const btnKanan = document.getElementById("btnKanan");
+
+      btnKiri.addEventListener("click", () => {
+        topRating.scrollLeft -= 350;
+      });
+      btnKanan.addEventListener("click", () => {
+        topRating.scrollLeft += 350;
+      });
+      const trending = document.getElementById("trending");
+      const trendingKiri = document.getElementById("trendingKiri");
+      const trendingKanan = document.getElementById("trendingKanan");
+
+      trendingKiri.addEventListener("click", () => {
+        trending.scrollLeft -= 340;
+      });
+      trendingKanan.addEventListener("click", () => {
+        trending.scrollLeft += 340;
+      });
+      const rilisBaru = document.getElementById("rilisBaru");
+      const rilisKiri = document.getElementById("rilisKiri");
+      const rilisKanan = document.getElementById("rilisKanan");
+
+      rilisKiri.addEventListener("click", () => {
+        rilisBaru.scrollLeft -= 340;
+      });
+      rilisKanan.addEventListener("click", () => {
+        rilisBaru.scrollLeft += 340;
+      });
+    </script>
+  </body>
+</html>
